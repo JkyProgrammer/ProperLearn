@@ -1,26 +1,32 @@
 #include "FeedForwardNeuralNet.h"
 
 
-void FeedForwardNeuralNet::input(float *) {
+void FeedForwardNeuralNet::input(float * inputs) {
+    for (int i = 0; i < inputData.rows(); i++) {
+        inputData(i, 0) = inputs[i];
+    }
+}
+
+float * FeedForwardNeuralNet::compute(int layers) {
     
 }
 
-float * FeedForwardNeuralNet::compute(int) {
+float FeedForwardNeuralNet::cost(float * targets) {
     
 }
 
-void FeedForwardNeuralNet::randomise(int) {
+void FeedForwardNeuralNet::initialise(int nlayers, int * nnodes) {
     
 }
 
-float * FeedForwardNeuralNet::getWeights(int, int) {
+void FeedForwardNeuralNet::randomise(int layer) {
     
 }
 
-float FeedForwardNeuralNet::getBias(int, int) {
+float * FeedForwardNeuralNet::getWeights(int layer, int node) {
     
 }
 
-float FeedForwardNeuralNet::cost(float *) {
+float FeedForwardNeuralNet::getBias(int layer, int node) {
     
 }

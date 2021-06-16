@@ -17,10 +17,11 @@ private:
 public:
     void input (float *);
     float * compute (int);
+    float cost (float *);
 
+    void initialise (int, int *);
     void randomise (int);
+
     float * getWeights (int, int);
     float getBias (int, int);
-
-    float cost (float *);
 };
