@@ -21,11 +21,13 @@ int gui_main () {
     SetTargetFPS(30);
 
     FeedForwardNeuralNet ffnn;
-    ffnn.initialise(5, new int[5]{3, 8, 9, 6, 3});
+    int * ns = new int[30];
+    for (int i = 0; i < 30; i++) ns[i] = (rand() % 16) + 1;
+    ffnn.initialise(30, ns);
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(DARKGRAY);
         
         int verticalCentre = GetScreenHeight ()/2;
         int layers = ffnn.count_layers();
